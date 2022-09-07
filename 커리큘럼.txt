@@ -1,0 +1,77 @@
+nodejs = 자바스크립트 독립 실행기
+
+npm = 자바스크립트 라이브러리 설치 및 실행 (제이쿼리연결하듯이 쓰는거라고함)
+
+barbel라이브러리 = jsx문법 (html이랑 자바스크립트를 합쳐놓은 문법)
+
+webpack = 압축기
+
+create-react-app = 라이브러리
+
+vscode , nodejs 설정
+1. 구글에서 nodejs 검색후 설치 (LTS버전으로)
+
+2. vscode
+	- 설정, 상단JSON setting 들어가서 
+		  "emmet.includeLanguages":{
+      "javascript":"javascriptreact"
+  }
+	추가하고, 마지막에는 쉼표가있으면안됨
+
+	익스텐션검색창에 Reactjs code snippets , Auto Import 검색 후 설치
+			 
+	- vscode 관리자권한 실행
+		- 터미널 -> 새터미널 ctrl + shift + `
+
+	- 터미널실행 node -v + enter 눌러서 밑에 2줄뜨는지 확인
+
+
+3. 리액트 프로젝트 세팅
+	- 리액트 개발환경 구축 프로그램 설치
+		npm i -g create-react-app // i는 install => npm create-react-app을 설치하겠다
+		powershell로 안되면 cmd로 새 터미널 열어서 버전확인
+	-리액트 프로젝트 폴더 만들기
+		create-react-app 폴더명(중간 바 가능(카멜케이스folderName ,파스칼케이스FolderName ))
+	만든폴더를 vscode에서 오른쪽 클릭 후, 통합 터미널에서 열기 눌러서 해당폴더 열기
+
+	-리액트 서버환경 실행
+	터미널환경에서 npm run start
+	- 리액트 서버환경 종료
+	ctrl + C
+①puvlic폴더 index.html를 열어야함
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+  </body>
+</html>
+
+만남기고 다 지움
+
+②src 폴더에 index.js가서
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <>
+    <App />
+  </>
+);
+만 남기고 다 지움
+
+③ app.js가서 다 지운다음
+src누르고 탭한다음 div는 지우셈
+
+폴더는 건든폴더 제외하고 다 지움
+초기폴더가서 pacage들어간거랑 폴더 빼고 파일2개 지움
+
+4. 리액트 프로젝트를 깃과 연동시 주의사항
